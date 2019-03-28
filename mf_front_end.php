@@ -519,6 +519,7 @@ function _processed_value($value, $type, $options = array(), $image_array = 0 ){
           unset($options['css_class']);
           $options = _processed_params($options);
           
+          $result = array();
           $data = wp_get_attachment_image_src($value,'original');
           $result['original'] = $data[0];
           if( empty($options) ){
@@ -531,6 +532,7 @@ function _processed_value($value, $type, $options = array(), $image_array = 0 ){
             }
           }
         }
+        $result = $result['original'];
       }else{
         if( !empty($value) ){
           $data = wp_get_attachment_image_src($value,'original');
