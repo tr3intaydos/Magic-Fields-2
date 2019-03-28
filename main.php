@@ -406,7 +406,7 @@ if ( !function_exists('mf_change_template') ) {
       return;
     }
 
-    $template = TEMPLATEPATH.'/'.$template;
+    $template = get_stylesheet_directory().'/'.$template;
 
     if ( $template = apply_filters( 'template_include', $template ) ) {
       include($template);
