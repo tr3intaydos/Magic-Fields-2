@@ -28,7 +28,7 @@ class mf_ajax_call{
   public function mf_sort_field($data){
     if ( !empty( $data['order'] ) && !empty( $data['group_id'] ) ) {
       $order = $data['order'];
-      $order = split(',',$order);
+      $order = explode(',',$order);
       array_walk( $order, create_function( '&$v,$k', '$v =  str_replace("order_","",$v);' ));
 
       if( $thing =  mf_custom_fields::save_order_field( $data['group_id'], $order ) ) {

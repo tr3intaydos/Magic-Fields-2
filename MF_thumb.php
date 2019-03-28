@@ -11,7 +11,7 @@
 */
 class mfthumb{
 
-	function mfthumb(){
+	function __construct(){
 		require_once(ABSPATH."/wp-admin/includes/image.php");
 		require_once(ABSPATH."/wp-includes/media.php");
 	}

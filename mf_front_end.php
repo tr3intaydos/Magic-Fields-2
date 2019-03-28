@@ -456,7 +456,7 @@ function _processed_value($value, $type, $options = array(), $image_array = 0 ){
     $options= unserialize( $options );
   }
 
-  $result = '';
+  $result = array();
   switch($type){
     case 'audio':
     case 'file':
