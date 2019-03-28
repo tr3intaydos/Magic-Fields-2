@@ -282,9 +282,7 @@ class mf_post extends mf_admin {
             //$value =  mf_process_value_by_type($field_name,$value);
 
             // Adding field value meta data
-            add_post_meta($post_id, "{$field_name}", $value);
-
-            $meta_id = $wpdb->insert_id;
+            $meta_id = add_post_meta($post_id, "{$field_name}", $value);
 
             $sql_insert = $wpdb->prepare(
               "INSERT INTO " . MF_TABLE_POST_META .
